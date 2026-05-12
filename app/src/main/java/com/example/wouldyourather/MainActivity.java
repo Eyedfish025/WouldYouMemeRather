@@ -1,4 +1,4 @@
-package com.example.wouldyoumemerather;
+package com.example.wouldyourather;
 
 import android.os.Bundle;
 
