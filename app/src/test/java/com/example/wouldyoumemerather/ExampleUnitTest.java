@@ -1,4 +1,4 @@
-package com.example.wouldyourather;
+package com.example.wouldyoumemerather;
 
 import org.junit.Test;
 
