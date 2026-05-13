@@ -8,6 +8,7 @@
     android:background="#2F3542"
     tools:context=".MainActivity">
 
+    <!-- Título da aplicação -->
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -21,6 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Container vertical para os dois memes e o texto "OR" -->
     <LinearLayout
         android:id="@+id/memeContainer"
         android:layout_width="match_parent"
@@ -31,6 +33,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title">
 
+        <!-- Primeiro CardView contendo o primeiro meme -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardMeme1"
             android:layout_width="match_parent"
@@ -51,6 +54,7 @@
                 android:scaleType="centerCrop" />
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Texto divisor central -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,6 +64,7 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
+        <!-- Segundo CardView contendo o segundo meme -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardMeme2"
             android:layout_width="match_parent"
@@ -82,6 +87,7 @@
 
     </LinearLayout>
 
+    <!-- Barra de progresso exibida durante o carregamento da API -->
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
