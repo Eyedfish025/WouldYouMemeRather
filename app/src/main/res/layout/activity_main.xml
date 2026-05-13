@@ -39,7 +39,7 @@
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
-            app:cardBackgroundColor="#FF6B6B"
+            app:cardBackgroundColor="#FF0000"
             app:cardCornerRadius="12dp"
             app:strokeColor="#FFFFFF"
             app:strokeWidth="2dp">
@@ -68,7 +68,7 @@
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
-            app:cardBackgroundColor="#FF6B6B"
+            app:cardBackgroundColor="#0000FF"
             app:cardCornerRadius="12dp"
             app:strokeColor="#FFFFFF"
             app:strokeWidth="2dp">
