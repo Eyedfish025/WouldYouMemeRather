@@ -19,11 +19,18 @@ public class MemeApiService {
     private final OkHttpClient client = new OkHttpClient();
     private final Gson gson = new Gson();
 
+    /**
+     * Interface de retorno para lidar com o resultado da busca de memes.
+     */
     public interface Callback {
         void onSuccess(List<Meme> memes);
         void onError(Exception e);
     }
 
+    /**
+     * Inicia a busca de memes de múltiplas fontes em uma thread separada.
+     * @param callback O objeto que receberá os resultados ou o erro.
+     */
     public void fetchMemes(Callback callback) {
         new Thread(() -> {
             try {
@@ -37,6 +44,11 @@ public class MemeApiService {
         }).start();
     }
 
+    /**
+     * Busca memes da API do Imgflip.
+     * @return Uma lista de objetos Meme.
+     * @throws IOException Se houver erro na requisição.
+     */
     private List<Meme> fetchImgflipMemes() throws IOException {
         Request request = new Request.Builder().url(IMGFLIP_URL).build();
         try (Response response = client.newCall(request).execute()) {
@@ -58,6 +70,11 @@ public class MemeApiService {
         }
     }
 
+    /**
+     * Busca memes da API do Reddit (subrreddit /r/memes).
+     * @return Uma lista de objetos Meme filtrados.
+     * @throws IOException Se houver erro na requisição.
+     */
     private List<Meme> fetchRedditMemes() throws IOException {
         Request request = new Request.Builder().url(REDDIT_URL).build();
         try (Response response = client.newCall(request).execute()) {
