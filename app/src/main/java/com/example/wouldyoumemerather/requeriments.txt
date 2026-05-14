@@ -1,0 +1,28 @@
+# ================================
+# Jogo: O que você prefere?
+# ================================
+
+# ── NODE.JS ──────────────────────
+# Instale o Node.js em: https://nodejs.org
+# Versão recomendada: 18 ou superior
+
+# Dependências Node (instale com: npm install):
+node-fetch@2
+express
+@vitalets/google-translate-api
+
+# ── JAVA ─────────────────────────
+# Instale o JDK em: https://adoptium.net
+# Versão usada: JDK 25 (Eclipse Adoptium)
+
+# ── COMO RODAR ───────────────────
+# 1. Instale as dependências Node:
+#    npm install
+
+# 2. Suba o servidor Node (terminal 1):
+#    node game.js
+
+# 3. Compile e rode o Java (terminal 2):
+#    cd jarva
+#    javac Game.java
+#    & "C:\Program Files\Eclipse Adoptium\jdk-25.0.3.9-hotspot\bin\java.exe" Game
