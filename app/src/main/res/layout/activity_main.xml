@@ -8,7 +8,6 @@
     android:background="#2F3542"
     tools:context=".MainActivity">
 
-    <!-- Título da aplicação -->
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -22,7 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Container vertical para os dois memes e o texto "OR" -->
     <LinearLayout
         android:id="@+id/memeContainer"
         android:layout_width="match_parent"
@@ -33,7 +31,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title">
 
-        <!-- Primeiro CardView contendo o primeiro meme -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardMeme1"
             android:layout_width="match_parent"
@@ -47,14 +44,30 @@
             app:strokeColor="#FFFFFF"
             app:strokeWidth="2dp">
 
-            <ImageView
-                android:id="@+id/imgMeme1"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop" />
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgMeme1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/txtPorcentagemMeme1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#B3000000"
+                    android:gravity="center"
+                    android:text="0%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </FrameLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Texto divisor central -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,7 +77,6 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <!-- Segundo CardView contendo o segundo meme -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardMeme2"
             android:layout_width="match_parent"
@@ -78,16 +90,32 @@
             app:strokeColor="#FFFFFF"
             app:strokeWidth="2dp">
 
-            <ImageView
-                android:id="@+id/imgMeme2"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop" />
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgMeme2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/txtPorcentagemMeme2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#B3000000"
+                    android:gravity="center"
+                    android:text="0%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </FrameLayout>
         </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 
-    <!-- Barra de progresso exibida durante o carregamento da API -->
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"

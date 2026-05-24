@@ -84,7 +84,8 @@ public class MemeApiService {
             JsonArray children = json.getAsJsonObject("data").getAsJsonArray("children");
             for (JsonElement element : children) {
                 JsonObject post = element.getAsJsonObject().getAsJsonObject("data");
-                if (post.get("over_18").getAsBoolean() || post.get("is_video").getAsBoolean()) continue;
+                if (post.get("over_18").getAsBoolean() || post.get("is_video").getAsBoolean())
+                    continue;
                 String url = post.get("url").getAsString();
                 if (url.endsWith(".jpg") || url.endsWith(".jpeg") || url.endsWith(".png")) {
                     memes.add(new Meme(
